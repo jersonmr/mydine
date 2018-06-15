@@ -1,0 +1,129 @@
+// NEWSLETTER SECTION
+.newsletter {
+	background: url("../images/carne_brasa2.jpg") no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: #fff;
+	text-align: center;
+	min-height: 100vh;
+	padding-top: 94px;
+	position: relative;
+	&__shadow {
+		background: url("../images/04.png");
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.container {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;		
+		justify-content: center;
+	}
+
+	&__title {
+		font-family: $open-font;
+		font-size: 2rem;
+		font-weight: bold;
+		@include media(md) {
+			font-size: 3rem;
+		}
+	}
+
+	&__subtitle {
+		font-family: 'Arial', sans-serif;
+		font-size: 1.5rem;
+		@include media(md) {
+			font-size: 2rem;
+		}
+		&--signup {
+			font-family: $open-font;
+			font-size: 1rem;
+			text-transform: uppercase;
+			@include media(md) {
+				font-size: 1.2rem;
+			}
+		}
+	}
+
+	&__arrow {		
+		a {
+			color: #fff;
+			display: inline-block;
+			font-size: 4rem;
+			animation: flecha-animada 2s ease-in-out infinite;
+		}
+	}	
+}
+
+// HOW WE WORK SECTION
+.work {	
+	font-family: $open-font;
+	text-align: center;
+
+	&__item {
+		img {
+			width: 80px;
+		}
+	}
+
+	&__title {
+		font-size: 2rem;
+		font-weight: 800;
+		margin-bottom: 2rem;
+		@include media(sm) {
+			flex-basis: 100%;
+		}
+	}
+
+	h4 {
+		font-size: 0.9rem;
+		font-weight: bold;
+		margin-top: 1rem;
+		text-transform: uppercase;	
+	}
+	&__description {
+		font-family: $lora-font;
+		font-size: 1.3rem;
+		line-height: 1.5;
+	}
+}
+
+// SHARE SECTION
+.share {
+	text-align: center;
+	&__title {
+		font-family: $open-font;
+		font-size: 1.2rem;		
+		margin-bottom: 2rem;
+	}
+	&__social {
+		display: flex;
+		justify-content: center;
+	}
+	&__icon {		
+		font-size: 2rem;
+		margin: 0 0.5rem;
+		width: 30px;
+		img {
+			transition: all 0.5s;
+			&:hover {
+				transform: scale(1.3);
+			}
+		}		
+	}	
+}
+
+// Keyframes
+@keyframes flecha-animada {
+	from {
+			transform: translateY(0);
+	}
+	50% {
+			transform: translateY(6px);
+	}
+	to {
+			transform: translateY(0);
+	}
+}

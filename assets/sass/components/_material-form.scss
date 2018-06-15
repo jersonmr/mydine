@@ -1,0 +1,53 @@
+// Variables
+.material {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	text-align: left;
+	@include media(md) {		
+		margin: auto;
+	}
+	&-item {
+		width: 100%;
+		position: relative;
+		padding: 1rem;
+	}
+	&-input {
+		background: transparent;
+		border-bottom: 2px solid $green;
+		color: white;
+		padding: 1rem;
+		width: 100%;
+		transition: all 0.3s;
+		&:focus {
+			border-bottom: 2px solid gray;
+		}
+		&:valid + .material-label, &:focus + .material-label {
+			top: 1rem;
+			left: 1rem;
+			font-size: 0.8rem;
+		}
+	}
+	&-label {
+		position: absolute;
+		top: 2rem;
+		left: 2rem;
+		text-transform: capitalize;
+		transition: all 0.3s;
+	}
+	&-button {
+		background: $green;
+		box-shadow: 0 0 0 2px darken($green, 15%);
+		color: #fff;
+		font-size: 1rem;
+		padding: 0.5rem 0;
+		text-transform: uppercase;
+		width: 100%;
+		transition: all 0.3s ease;		
+		&:hover {
+			background: transparent;
+			box-shadow: 0 0 0 2px $green;
+			cursor: pointer;
+		}
+	}
+}

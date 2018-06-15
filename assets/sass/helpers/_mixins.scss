@@ -1,0 +1,54 @@
+// Manejar los media queries
+// ==========  Mixins para los Media Queries  ==========
+@mixin media($consulta) {
+
+  $media-xxs:"(min-width : 320px)"; // iPhone Retina
+  $media-xs: "(min-width : 480px)"; // Telefonos
+  $media-sm: "(min-width: 768px)";  // Tablets
+  $media-md: "(min-width: 992px)";  // Escritorios
+  $media-lg: "(min-width: 1200px)"; // Resoluciones grandes
+
+  @if $consulta == xxs {
+    @media #{$media-xxs} { @content; }
+  }
+  @if $consulta == xs {
+    @media #{$media-xs} { @content; }
+  }
+  @else if $consulta == sm {
+    @media #{$media-sm} { @content; }
+  }
+  @else if $consulta == md {
+    @media #{$media-md}  { @content; }
+  }
+  @else if $consulta == lg {
+    @media #{$media-lg}  { @content; }
+  }
+}
+
+// Imagen responsive
+@mixin img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+// Cambio de imagenes de los personajes
+@mixin personaje($num) {
+  background: url("../images/personajes/background-personaje#{$num}.jpg") no-repeat;
+}
+
+// Botones empresas de camersur
+@mixin mis-empresas($color) {
+  border-top: 4px solid $color;
+  a {
+    background-color: $color;
+    &:hover {
+      background-color: darken($color, 10%);
+      text-decoration: none;
+    }
+    &:after {
+      content: "\f0da";
+      font-family: FontAwesome;
+      margin-left: 0.4rem;
+    }
+  }
+}

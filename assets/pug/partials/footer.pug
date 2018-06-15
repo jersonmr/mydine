@@ -1,0 +1,16 @@
+script(src="./js/jquery.js")
+script(src="./js/popper.js")
+script(src="./js/bootstrap.js")
+script(src="./js/wow.js")
+script(src="./js/smooth-scroll.min.js")
+block scripts
+	script(type="text/javascript").
+		new WOW().init();
+		/*----------------------------------
+		Iniciamos smoothScroll (Scroll Suave)
+		--------------------------------*/
+		smoothScroll.init({
+				speed: 1000, // Integer. How fast to complete the scroll in milliseconds
+				offset: 100, // Integer. How far to offset the scrolling anchor location in pixels
+
+		});

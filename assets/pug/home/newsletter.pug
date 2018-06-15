@@ -1,0 +1,47 @@
+block styles
+	style(type="text/css").
+		#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	
+section.newsletter
+	.newsletter__shadow
+		.container
+			h1(class="newsletter__title py-2 wow bounceIn") WANT REAL CARIBBEAN FOOD?
+			h2(class="newsletter__subtitle py-2 wow bounceIn", data-wow-delay=".3s") Fresh. Gourmet. Meal prep.
+			h2(class="newsletter__subtitle newsletter__subtitle--signup py-2") Sign up for tasty My Dine news
+
+			.newsletter__form
+				form.material(action='//mydine.us16.list-manage.com/subscribe/post?u=56e30fad7d44693acea55cdc7&id=ab9227e28f', method='post', name='mc-embedded-subscribe-form', target='_blank')
+					.col-md-6.col-lg-4
+						.material-item
+							input(type="text", name="NAME", class="material-input" id="name", required)
+							label(for="mce-NAME", class="material-label") Name
+					.col-md-6.col-lg-4
+						.material-item
+							input(type="email", name="EMAIL", class="material-input" id="email", required)
+							label(for="mce-EMAIL", class="material-label") email
+
+							// real people should not fill this in and expect good things - do not remove this or risk form bot signups
+							div(style='position: absolute; left: -5000px;', aria-hidden='true')
+								input(type='text', name='b_56e30fad7d44693acea55cdc7_ab9227e28f', tabindex='-1', value='')
+
+					.col-md-12.col-lg-4
+						.material-item
+							input(type="submit", class="material-button", value="Sign up", name='subscribe')
+
+
+				//-form.material
+					.col-md-6.col-lg-4
+						.material-item
+							input(type="text", name="name", class="material-input" id="name", required)
+							label(for="name", class="material-label") Name
+					.col-md-6.col-lg-4
+						.material-item
+							input(type="email", name="email", class="material-input" id="email", required)
+							label(for="email", class="material-label") email
+					.col-md-12.col-lg-4
+						.material-item
+							input(type="submit", class="material-button", value="Sign up")
+
+			.newsletter__arrow
+				a(href="#work", title="Arrow down", data-scroll) 
+					i.fa.fa-angle-down
